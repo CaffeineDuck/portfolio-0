@@ -8,12 +8,10 @@ import {
 import GlassPanel from "../Images/GlassPanel";
 import { motion } from "framer-motion-3d";
 import { RoughMaterialRoyalBlue } from "../Materials";
-import posts from "../../../Assets/Posts.json";
 import { useRef, memo } from "react";
 import Router from "next/router";
 
-const PostsPresenter = ({ setCursor, theme, isPhone }) => {
-  const Posts = JSON.parse(JSON.stringify(posts));
+const PostsPresenter = ({ setCursor, theme, isPhone, posts }) => {
   const counter = useRef(0);
 
   return (
@@ -43,8 +41,8 @@ const PostsPresenter = ({ setCursor, theme, isPhone }) => {
         Explore my posts!
       </Text>
       <group position={[0, 1, 0]}>
-        {Posts &&
-          Posts.map((p, k) => {
+        {posts &&
+          posts.map((post, k) => {
             if (k % 2 === 0 && k !== 0) counter.current += 1;
             return (
               <GlassPanel
@@ -54,12 +52,12 @@ const PostsPresenter = ({ setCursor, theme, isPhone }) => {
                     ? [0, k * -2.5, 0]
                     : [k % 2 === 0 ? -2 : 2, counter.current * -2.5, 0]
                 }
-                texture={`${p.assets}/header${
-                  theme ? "" : "_dark"
-                }.png`}
+                texture={post.coverImage}
                 imageScale={0.7}
                 setCursor={setCursor}
-                onClick={() => Router.push(`/posts/${p.url}`)}
+                onClick={() =>
+                  (window.location.href = `https://blog.samrid.me/${post.url}`)
+                }
               />
             );
           })}

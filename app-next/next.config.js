@@ -4,7 +4,7 @@ const nextConfig = {
 };
 
 module.exports = {
-  nextConfig,
+  ...nextConfig,
   async redirects() {
     return [
       {

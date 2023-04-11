@@ -22,10 +22,7 @@ const One = ({ theme, setTheme, setCursor }) => {
           whileHover={{ scale: 0.9 }}
           transition={{ type: "spring", bounce: 0.9, duration: 3 }}
         >
-          <DistortingSphere
-            roughness={0}
-            metalness={theme ? 0.95 : 0.05}
-          />
+          <DistortingSphere roughness={0} metalness={theme ? 0.95 : 0.05} />
         </motion.mesh>
         <motion.mesh
           animate={tap ? "moving" : "default"}
@@ -39,10 +36,7 @@ const One = ({ theme, setTheme, setCursor }) => {
           onPointerOver={() => setCursor(true)}
           onPointerOut={() => setCursor(false)}
         >
-          <DistortingSphere
-            roughness={0}
-            metalness={theme ? 0.95 : 0.05}
-          />
+          <DistortingSphere roughness={0} metalness={theme ? 0.95 : 0.05} />
         </motion.mesh>
         <motion.mesh
           position={[-0.7, -2, -2]}
@@ -53,10 +47,7 @@ const One = ({ theme, setTheme, setCursor }) => {
           onPointerOver={() => setCursor(true)}
           onPointerOut={() => setCursor(false)}
         >
-          <DistortingSphere
-            roughness={0}
-            metalness={theme ? 0.95 : 0.05}
-          />
+          <DistortingSphere roughness={0} metalness={theme ? 0.95 : 0.05} />
         </motion.mesh>
 
         <RotatingCube
@@ -97,7 +88,7 @@ const One = ({ theme, setTheme, setCursor }) => {
             color={theme ? "black" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            I'm Romain
+            I'm Samrid
           </Text>
         </motion.mesh>
         <motion.mesh
@@ -111,7 +102,7 @@ const One = ({ theme, setTheme, setCursor }) => {
             color={theme ? "black" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            Student in software development
+            A student and a backend developer
           </Text>
         </motion.mesh>
 

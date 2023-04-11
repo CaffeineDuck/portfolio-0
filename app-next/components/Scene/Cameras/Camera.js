@@ -29,6 +29,14 @@ const Camera = ({ isPhone }) => {
       rotateY: 0,
       rotateZ: 0,
     },
+    fourth: {
+      x: isPhone ? 1 : 5,
+      y: -15,
+      z: 10,
+      rotateX: 0,
+      rotateY: -Math.PI / 2,
+      rotateZ: 0,
+    },
   };
 
   const scroll = useScroll();
@@ -37,12 +45,20 @@ const Camera = ({ isPhone }) => {
   useFrame(() => {
     if (scroll.offset < 0.08 && moveTo !== "first") {
       return setMoveTo("first");
-    }
-    if (scroll.offset >= 0.08 && scroll.offset < 0.24 && moveTo !== "second") {
+    } else if (
+      scroll.offset >= 0.08 &&
+      scroll.offset < 0.24 &&
+      moveTo !== "second"
+    ) {
       return setMoveTo("second");
-    }
-    if (scroll.offset >= 0.24 && moveTo !== "third") {
+    } else if (
+      scroll.offset >= 0.24 &&
+      scroll.offset < 0.5 &&
+      moveTo !== "third"
+    ) {
       return setMoveTo("third");
+    } else if (scroll.offset >= 0.5 && moveTo !== "fourth") {
+      return setMoveTo("fourth");
     }
   });
 

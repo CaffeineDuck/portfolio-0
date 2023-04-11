@@ -8,24 +8,24 @@ const App = () => {
   return (
     <div>
       <NextSeo
-        title={`Romain Le Gall`}
+        title={`Samrid Pandit`}
         description={
-          "Hi, I'm Romain 👋 I'm a french student interested in web development and data science. Take a look at my portfolio!"
+          "Hi, I'm Samrid (CaffeineDuck) 👋 I'm a backend engineer and a student. Take a look at my portfolio!"
         }
         additionalMetaTags={[
           {
             name: "keywords",
             content:
-              "portfolio, docker, grafana, it, mysql, docker swarm, mariadb, internship, syncing, cryptomator, 3D, reactjs, python, react three fiber",
+              "portfolio, caffeineduck, python, samrid, samrid pandit, async, rust",
           },
         ]}
         openGraph={{
           type: "website",
           locale: "en_US",
-          url: `https://romain-legall.com/`,
-          title: `Romain Le Gall`,
+          url: `https://samrid.me/`,
+          title: `Samrid Pandit`,
           description:
-            "Hi, I'm Romain 👋 I'm a french student interested in web development and data science. Take a look at my portfolio!",
+            "Hi, I'm Samrid (CaffeineDuck) 👋 I'm a backend engineer and a student. Take a look at my portfolio!",
         }}
       />
       <Home isPhone={isPhone} />

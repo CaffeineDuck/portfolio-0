@@ -1,19 +1,3 @@
+Just a [portfolio site](https://samrid.me).
 
-# Portfolio 2022 / 1
-
-Here is my portfolio !
-
-
-
-
-## Made with
-
-- ReactJS / NextJS
-- TailwindCSS
-- React Three Fiber / ThreeJS
-- Flask / Python
-
-
-## Link
-
-https://romain-legall.fr
+Credit: [Romainlg29](https://github.com/Romainlg29/portfolio-22)

@@ -1,10 +1,10 @@
 import { Scroll } from "@react-three/drei";
 import ImageMesh from "../Images/ImageMesh";
 
-const Medias = ({ isPhone, setCursor }) => {
+const Medias = ({ setCursor }) => {
   return (
     <Scroll>
-      <group position={[0, -27, -1]}>
+      <group position={[10, -27.6, 10]} rotation={[0, -Math.PI / 2, 0]}>
         <ImageMesh
           position={[-0.5, 0, 0]}
           texture={`/Assets/Logo/linkedin.svg`}
@@ -12,7 +12,7 @@ const Medias = ({ isPhone, setCursor }) => {
           pointerIn={() => setCursor(true)}
           pointerOut={() => setCursor(false)}
           click={() =>
-            window.open("https://www.linkedin.com/in/romainlg29/", "_blank")
+            window.open("https://www.linkedin.com/in/caffeineduck/", "_blank")
           }
         />
         <ImageMesh
@@ -20,7 +20,7 @@ const Medias = ({ isPhone, setCursor }) => {
           scale={2.4}
           pointerIn={() => setCursor(true)}
           pointerOut={() => setCursor(false)}
-          click={() => window.open("https://github.com/Romainlg29", "_blank")}
+          click={() => window.open("https://github.com/caffeineduck", "_blank")}
         />
         <ImageMesh
           position={[0.5, 0, 0]}
@@ -28,9 +28,7 @@ const Medias = ({ isPhone, setCursor }) => {
           scale={0.6}
           pointerIn={() => setCursor(true)}
           pointerOut={() => setCursor(false)}
-          click={() =>
-            window.open("mailto:legall.romain29470@gmail.com", "_blank")
-          }
+          click={() => window.open("mailto:hello@samrid.me", "_blank")}
         />
       </group>
     </Scroll>

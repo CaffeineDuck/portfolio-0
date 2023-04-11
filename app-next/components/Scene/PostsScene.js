@@ -4,7 +4,7 @@ import Lights from "./Lights";
 import { Suspense, useState } from "react";
 import PostsPresenter from "./Posts/PostsPresenter";
 
-const PostsScene = ({ isPhone }) => {
+const PostsScene = ({ isPhone, posts }) => {
   const [cursor, setCursor] = useState(false);
   const [theme] = useState(true);
 
@@ -26,6 +26,7 @@ const PostsScene = ({ isPhone }) => {
             setCursor={setCursor}
             theme={theme}
             isPhone={isPhone}
+            posts={posts}
           />
         </ScrollControls>
         <Lights />

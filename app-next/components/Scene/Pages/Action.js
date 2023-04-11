@@ -37,7 +37,7 @@ const Two = ({ theme, isPhone }) => {
             color={theme ? "black" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            I'm looking for
+            I have been working as a
           </Text>
           <Text
             position={[10, -10.3, 5]}
@@ -46,7 +46,7 @@ const Two = ({ theme, isPhone }) => {
             color={theme ? "black" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            an engineering school
+            Backend Engineer
           </Text>
           <Text
             position={[10, -10.6, 5]}
@@ -55,7 +55,7 @@ const Two = ({ theme, isPhone }) => {
             color={theme ? "royalblue" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            Starting in September 2022
+            Since 2020
           </Text>
         </group>
       ) : (
@@ -67,7 +67,7 @@ const Two = ({ theme, isPhone }) => {
             color={theme ? "black" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            I'm looking for an engineering school
+            I have been working as a Backend Engineer
           </Text>
           <Text
             position={[10, -10.3, 5]}
@@ -76,7 +76,7 @@ const Two = ({ theme, isPhone }) => {
             color={theme ? "royalblue" : "white"}
             font={`https://fonts.gstatic.com/s/comfortaa/v12/1Ptsg8LJRfWJmhDAuUs4TYFs.woff`}
           >
-            Starting in September 2022
+            Since 2020
           </Text>
         </group>
       )}

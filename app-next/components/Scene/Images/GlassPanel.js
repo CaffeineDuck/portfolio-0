@@ -8,7 +8,7 @@ const GlassPanel = ({
   texture,
   imageScale = 1,
   position = [0, 0, 0],
-  onClick = () => {},
+  onClick = () => { },
 }) => {
   return (
     <motion.mesh
