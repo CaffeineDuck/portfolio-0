@@ -31,7 +31,7 @@ const Two = ({ theme, isPhone }) => {
       {isPhone ? (
         <group>
           <Text
-            position={[10, -10, 5]}
+            position={[1, -10, 5]}
             rotation={[0, -Math.PI / 2, 0]}
             scale={2.2}
             color={theme ? "black" : "white"}

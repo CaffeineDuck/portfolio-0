@@ -80,20 +80,34 @@ const Projects = ({ theme, setCursor, isPhone }) => {
           transition={{ type: "spring", bounce: 0.3, duration: 1 }}
         >
           {data &&
-            data.map((project, index) => (
-              <GlassPanel
-                texture={project.openGraphImageUrl}
-                imageScale={1.1}
-                setCursor={setCursor}
-                position={
-                  index % 2 == 0
-                    ? [-2, index * -1.2, 0]
-                    : [2, (index - 1) * -1.2, 0]
-                }
-                onClick={() => window.open(project.url, "_blank")}
-                key={`project_${index}`}
-              />
-            ))}
+            data.map((project, index) => {
+              if (!isPhone) {
+                return (
+                  <GlassPanel
+                    texture={project.openGraphImageUrl}
+                    imageScale={1.1}
+                    setCursor={setCursor}
+                    position={
+                      index % 2 == 0
+                        ? [-2, index * -1.2, 0]
+                        : [2, (index - 1) * -1.2, 0]
+                    }
+                    onClick={() => window.open(project.url, "_blank")}
+                    key={`project_${index}`}
+                  />
+                );
+              } else if (index % 2 == 0)
+                return (
+                  <GlassPanel
+                    texture={project.openGraphImageUrl}
+                    imageScale={1.1}
+                    setCursor={setCursor}
+                    position={[0, index * -1.2, 0]}
+                    onClick={() => window.open(project.url, "_blank")}
+                    key={`project_${index}`}
+                  />
+                );
+            })}
         </motion.mesh>
         <group>
           <RoundedCube
